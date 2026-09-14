@@ -9,10 +9,17 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.template.loader import render_to_string
 from .serializers import RegisterSerializer, UserSerializer
+from drf_spectacular.utils import extend_schema
 
 User = get_user_model()
 
-
+@extend_schema(
+    summary='Регистрация',
+    request=RegisterSerializer,
+    responses={201: RegisterSerializer},
+    auth=[],
+    tags=['users'],
+)
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer

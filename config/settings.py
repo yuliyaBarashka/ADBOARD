@@ -128,9 +128,10 @@ SIMPLE_JWT = {
 # Swagger
 SPECTACULAR_SETTINGS = {
     'TITLE': 'AdBoard API',
-    'DESCRIPTION': 'API для доски объявлений',
+    'DESCRIPTION': 'API для доски объявлений: объявления, отзывы, пользователи, JWT',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
 }
 
 # Email

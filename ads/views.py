@@ -4,8 +4,16 @@ from .serializers import AdSerializer, AdDetailSerializer, ReviewSerializer
 from .permissions import IsAuthorOrAdminOrReadOnly
 from .filters import AdFilter
 from .paginators import AdPagination
+from drf_spectacular.utils import extend_schema, extend_schema_view
 
-
+@extend_schema_view(
+    list=extend_schema(summary='Список объявлений', tags=['Ads']),
+    create=extend_schema(summary='Создать объявление', tags=['Ads']),
+    retrieve=extend_schema(summary='Получить объявление', tags=['Ads']),
+    update=extend_schema(summary='Обновить объявление', tags=['Ads']),
+    partial_update=extend_schema(summary='Частично обновить объявление', tags=['Ads']),
+    destroy=extend_schema(summary='Удалить объявление', tags=['Ads']),
+)
 class AdViewSet(viewsets.ModelViewSet):
     queryset = Ad.objects.all()
     permission_classes = [IsAuthorOrAdminOrReadOnly]
