@@ -2,11 +2,18 @@ from rest_framework import viewsets, permissions
 from .models import Ad, Review
 from .serializers import AdSerializer, AdDetailSerializer, ReviewSerializer
 from .permissions import IsAuthorOrAdminOrReadOnly
+from .filters import AdFilter
+from .paginators import AdPagination
 
 
 class AdViewSet(viewsets.ModelViewSet):
     queryset = Ad.objects.all()
     permission_classes = [IsAuthorOrAdminOrReadOnly]
+    filterset_class = AdFilter
+    pagination_class = AdPagination
+    search_fields = ['title']
+    ordering_fields = ['created_at', 'price']
+    ordering = ['-created_at']
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
