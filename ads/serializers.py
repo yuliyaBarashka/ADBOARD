@@ -18,3 +18,10 @@ class AdDetailSerializer(AdSerializer):
         fields = AdSerializer.Meta.fields + ('reviews_count',)
 
 
+class ReviewSerializer(serializers.ModelSerializer):
+    author = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Review
+        fields = ('id', 'text', 'author', 'ad', 'created_at')
+        read_only_fields = ('author', 'created_at')
