@@ -9,6 +9,7 @@ from django.utils.encoding import force_bytes
 
 User = get_user_model()
 
+
 @pytest.fixture
 def user(db):
     return User.objects.create_user(
@@ -18,6 +19,7 @@ def user(db):
         last_name='Иванов',
         phone='+79990000000',
     )
+
 
 @pytest.fixture(autouse=True)
 def email_backend(settings):

@@ -13,6 +13,7 @@ from drf_spectacular.utils import extend_schema
 
 User = get_user_model()
 
+
 @extend_schema(
     summary='Регистрация',
     request=RegisterSerializer,

@@ -10,4 +10,3 @@ class AdFilter(django_filters.FilterSet):
     class Meta:
         model = Ad
         fields = ['title', 'min_price', 'max_price']
-        

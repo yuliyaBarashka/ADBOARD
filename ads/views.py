@@ -1,10 +1,11 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets
 from .models import Ad, Review
 from .serializers import AdSerializer, AdDetailSerializer, ReviewSerializer
 from .permissions import IsAuthorOrAdminOrReadOnly
 from .filters import AdFilter
 from .paginators import AdPagination
 from drf_spectacular.utils import extend_schema, extend_schema_view
+
 
 @extend_schema_view(
     list=extend_schema(summary='Список объявлений', tags=['Ads']),
@@ -31,6 +32,7 @@ class AdViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
+
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
@@ -45,4 +47,3 @@ class ReviewViewSet(viewsets.ModelViewSet):
         if ad_id:
             queryset = queryset.filter(ad_id=ad_id)
         return queryset
-
