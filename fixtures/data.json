@@ -1,0 +1,527 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$S5D0GFoHsXt6TY6TbisFiA$8Opa52//8qanC9OV7ka4U6Veeq1/nVpylAwApAqXTc0=",
+    "last_login": "2026-09-14T17:30:30Z",
+    "is_superuser": true,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-14T14:03:08Z",
+    "first_name": "Юлия",
+    "last_name": "Тихонова",
+    "phone": "89620000000",
+    "email": "admin@adboard.ru",
+    "role": "admin",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$2PSENESYclvlBnYDID4LNp$j9X/6poMYdpPCbd2NPVoryfxX4V74FMrGg+b8r8sV/g=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-14T14:23:24.281Z",
+    "first_name": "Иван",
+    "last_name": "Иванов",
+    "phone": "+79990000000",
+    "email": "test@test.ru",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$5Xeo5Kgp3Zul0iI8lKFSXq$a7na5NKjInmAWPSStZs//qyLtnRydfQcI+z5FRQ28kY=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:18:25Z",
+    "first_name": "Николай",
+    "last_name": "Иванов",
+    "phone": "89000000000",
+    "email": "user@example.com",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$mpAVzHU2iFoq1MAO8vJAAS$9hB80SWuTf9ga3BvMpuATn3LGcGemjLDMtFqupV+qlE=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:22:15Z",
+    "first_name": "Татьяна",
+    "last_name": "Мельникова",
+    "phone": "80000000099",
+    "email": "user2@example.com",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$bZKmGCpIYi3uvqOzWkBI2G$Nnm2mwpN57wDnoOkpNXW5DC4YCh84LfeMF0iLOUPjrA=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:23:34Z",
+    "first_name": "Ольга",
+    "last_name": "Тихонова",
+    "phone": "89950000000",
+    "email": "user3@example.com",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$JxgzhjIpb6XFwYQrCARwLa$KYSFpi9IMkVvzWGE73jEiRRJah5aCvoT0e3Euao6ZRQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:28:34.745Z",
+    "first_name": "Иван",
+    "last_name": "Иванов",
+    "phone": "+79990000002",
+    "email": "ivan@test.ru",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$7W8hvo9MfVDOXnJIAjbyDH$V9HpYdeQ0Gty3ivMVNc39oCWirOF7dORgfM5Ul4d7Rc=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:28:34.849Z",
+    "first_name": "Пётр",
+    "last_name": "Петров",
+    "phone": "+79990000003",
+    "email": "petr@test.ru",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$W08BMQ2QQRTZxQ3LlmzmK2$SqwPsxecYznSmPqHziliR+iTqc9fjDv2+fBV5777dsc=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:28:34.944Z",
+    "first_name": "Анна",
+    "last_name": "Сидорова",
+    "phone": "+79990000004",
+    "email": "anna@test.ru",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$nKjpyoedJDzCQJi8Wf8XfY$kWipvu8DHtIa+5XQSxIggeUBQu1xynjcUMT5qS5QnVU=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-15T07:28:35.037Z",
+    "first_name": "Мария",
+    "last_name": "Кузнецова",
+    "phone": "+79990000005",
+    "email": "maria@test.ru",
+    "role": "user",
+    "image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 1,
+  "fields": {
+    "title": "Ноутбук",
+    "price": 50000,
+    "description": "Ноутбук Acer",
+    "author": 2,
+    "created_at": "2026-09-14T17:31:40.997Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 2,
+  "fields": {
+    "title": "Ноутбук",
+    "price": 89000,
+    "description": "Ноутбук Apple",
+    "author": 1,
+    "created_at": "2026-09-14T17:32:24.250Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 3,
+  "fields": {
+    "title": "Смартфон",
+    "price": 60000,
+    "description": "Смартфон Xiaomi",
+    "author": 2,
+    "created_at": "2026-09-14T17:33:09.961Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 4,
+  "fields": {
+    "title": "Наушники",
+    "price": 25000,
+    "description": "Наушники Apple",
+    "author": 1,
+    "created_at": "2026-09-14T17:33:28.683Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 5,
+  "fields": {
+    "title": "Клавиатура",
+    "price": 3500,
+    "description": "Клавиатура с подсветкой",
+    "author": 2,
+    "created_at": "2026-09-14T17:34:05.254Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 6,
+  "fields": {
+    "title": "Ноутбук Acer",
+    "price": 50000,
+    "description": "Мощный ноутбук для работы",
+    "author": 6,
+    "created_at": "2026-09-15T07:29:53.172Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 7,
+  "fields": {
+    "title": "Ноутбук Apple",
+    "price": 89000,
+    "description": "MacBook Pro 2023, 16GB RAM",
+    "author": 8,
+    "created_at": "2026-09-15T07:29:53.175Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 8,
+  "fields": {
+    "title": "Смартфон Xiaomi",
+    "price": 60000,
+    "description": "Xiaomi 13 Pro, 256GB",
+    "author": 6,
+    "created_at": "2026-09-15T07:29:53.176Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 9,
+  "fields": {
+    "title": "Наушники Apple",
+    "price": 25000,
+    "description": "AirPods Pro, шумоподавление",
+    "author": 9,
+    "created_at": "2026-09-15T07:29:53.177Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 10,
+  "fields": {
+    "title": "Клавиатура Logitech",
+    "price": 3500,
+    "description": "Механическая с подсветкой",
+    "author": 7,
+    "created_at": "2026-09-15T07:29:53.177Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 11,
+  "fields": {
+    "title": "Монитор Dell",
+    "price": 27000,
+    "description": "27 дюймов, 4K, IPS",
+    "author": 6,
+    "created_at": "2026-09-15T07:29:53.178Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 12,
+  "fields": {
+    "title": "Мышь Razer",
+    "price": 4500,
+    "description": "Игровая, 16000 DPI",
+    "author": 8,
+    "created_at": "2026-09-15T07:29:53.179Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 13,
+  "fields": {
+    "title": "Веб-камера Logitech",
+    "price": 8000,
+    "description": "Full HD 1080p",
+    "author": 7,
+    "created_at": "2026-09-15T07:29:53.179Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 14,
+  "fields": {
+    "title": "Микрофон Blue",
+    "price": 12000,
+    "description": "Blue Yeti, USB",
+    "author": 9,
+    "created_at": "2026-09-15T07:29:53.180Z"
+  }
+},
+{
+  "model": "ads.ad",
+  "pk": 15,
+  "fields": {
+    "title": "Кресло геймерское",
+    "price": 25000,
+    "description": "С поддержкой поясницы",
+    "author": 6,
+    "created_at": "2026-09-15T07:29:53.181Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 1,
+  "fields": {
+    "text": "Хорошая клавиатура",
+    "author": 5,
+    "ad": 5,
+    "created_at": "2026-09-15T07:25:00.139Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 2,
+  "fields": {
+    "text": "Ноутбук дорогой",
+    "author": 2,
+    "ad": 1,
+    "created_at": "2026-09-15T07:26:00.920Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 3,
+  "fields": {
+    "text": "Быстрый, но греется",
+    "author": 4,
+    "ad": 2,
+    "created_at": "2026-09-15T07:27:07.832Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 4,
+  "fields": {
+    "text": "Отличный ноутбук, рекомендую",
+    "author": 7,
+    "ad": 6,
+    "created_at": "2026-09-15T07:30:07.574Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 5,
+  "fields": {
+    "text": "Быстрый, но греется",
+    "author": 8,
+    "ad": 6,
+    "created_at": "2026-09-15T07:30:07.577Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 6,
+  "fields": {
+    "text": "Дорого, но качественно",
+    "author": 6,
+    "ad": 7,
+    "created_at": "2026-09-15T07:30:07.577Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 7,
+  "fields": {
+    "text": "Хорошая камера",
+    "author": 9,
+    "ad": 8,
+    "created_at": "2026-09-15T07:30:07.577Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 8,
+  "fields": {
+    "text": "Батарея держит долго",
+    "author": 7,
+    "ad": 8,
+    "created_at": "2026-09-15T07:30:07.578Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 9,
+  "fields": {
+    "text": "Шумоподавление супер",
+    "author": 6,
+    "ad": 9,
+    "created_at": "2026-09-15T07:30:07.578Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 10,
+  "fields": {
+    "text": "Удобная, тихая",
+    "author": 8,
+    "ad": 10,
+    "created_at": "2026-09-15T07:30:07.579Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 11,
+  "fields": {
+    "text": "Цвета яркие",
+    "author": 7,
+    "ad": 11,
+    "created_at": "2026-09-15T07:30:07.579Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 12,
+  "fields": {
+    "text": "Точная, удобная",
+    "author": 6,
+    "ad": 12,
+    "created_at": "2026-09-15T07:30:07.580Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 13,
+  "fields": {
+    "text": "Качество отличное",
+    "author": 9,
+    "ad": 13,
+    "created_at": "2026-09-15T07:30:07.580Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 14,
+  "fields": {
+    "text": "Звук чистый",
+    "author": 8,
+    "ad": 14,
+    "created_at": "2026-09-15T07:30:07.580Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 15,
+  "fields": {
+    "text": "Спина не устаёт",
+    "author": 7,
+    "ad": 15,
+    "created_at": "2026-09-15T07:30:07.581Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 16,
+  "fields": {
+    "text": "Удобное, но дорогое",
+    "author": 9,
+    "ad": 15,
+    "created_at": "2026-09-15T07:30:07.581Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 17,
+  "fields": {
+    "text": "Стоит своих денег",
+    "author": 7,
+    "ad": 7,
+    "created_at": "2026-09-15T07:30:07.581Z"
+  }
+},
+{
+  "model": "ads.review",
+  "pk": 18,
+  "fields": {
+    "text": "Большой, удобный",
+    "author": 9,
+    "ad": 11,
+    "created_at": "2026-09-15T07:30:07.582Z"
+  }
+}
+]
