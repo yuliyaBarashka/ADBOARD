@@ -12,4 +12,7 @@ htmlcov/
 .DS_Store
 .idea/
 .vscode/
-.env.docker
+.env.docker.env
+.env.*
+!.env.sample
+

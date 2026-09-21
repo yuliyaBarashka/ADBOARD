@@ -4,7 +4,7 @@ Backend-часть для сайта объявлений: CRUD, отзывы, �
 
 ## Стек
 
-- Python 3.12, Django 5, DRF
+- Python 3.12, Django 6.1.1, Django REST Framework 3.18.1
 - PostgreSQL 15
 - JWT (simplejwt), CORS, django-filter, drf-spectacular
 - Docker, Docker Compose
@@ -45,6 +45,33 @@ GET	/api/docs/swagger/	все
 ### Тесты
 ```bash
 pytest --cov=users --cov=ads --cov-report=term-missing
+```
+
+## Структура проекта
+
+```text
+AdBoard/
+├── ads/                    # объявления, отзывы, фильтры и права доступа
+│   ├── migrations/         # миграции моделей объявлений и отзывов
+│   ├── filters.py          # фильтрация по названию и цене
+│   ├── models.py           # модели Ad и Review
+│   ├── permissions.py      # права автора и администратора
+│   ├── serializers.py      # сериализаторы API
+│   ├── tests.py            # тесты объявлений и отзывов
+│   └── views.py            # CRUD и фильтрация отзывов
+├── users/                  # пользователи, регистрация и восстановление пароля
+│   ├── migrations/         # миграции пользовательской модели
+│   ├── models.py           # пользователь с авторизацией по email
+│   ├── serializers.py      # регистрация и профиль
+│   ├── tests.py            # тесты аутентификации и паролей
+│   └── views.py            # профиль и восстановление пароля
+├── config/                 # настройки, корневые URL, ASGI и WSGI
+├── fixtures/               # тестовые данные
+├── templates/emails/       # шаблон письма восстановления пароля
+├── Dockerfile              # образ Django-приложения
+├── docker-compose.yml      # приложение и PostgreSQL
+├── requirements.txt        # зафиксированные зависимости
+└── manage.py               # команды Django
 ```
 
 ### Автор:
