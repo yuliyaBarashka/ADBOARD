@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # Local
     'users',
     'ads',
+    'web',
 ]
 
 MIDDLEWARE = [

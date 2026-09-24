@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ ad.title }}{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'web:ad-list' %}">Объявления</a></li>
+        <li class="breadcrumb-item active">{{ ad.title }}</li>
+    </ol>
+</nav>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h1>{{ ad.title }}</h1>
+        <p class="text-primary fw-bold fs-3">{{ ad.price }} ₽</p>
+        <p>{{ ad.description }}</p>
+        <hr>
+        <p class="text-muted mb-0">
+            Автор: <strong>{{ ad.author }}</strong> |
+            Создано: {{ ad.created_at|date:"d.m.Y H:i" }}
+        </p>
+    </div>
+</div>
+
+{% if user.is_authenticated %}
+    {% if user == ad.author or user.role == 'admin' %}
+        <div class="mb-4">
+            <a href="{% url 'web:ad-update' ad.pk %}" class="btn btn-warning">Редактировать</a>
+            <a href="{% url 'web:ad-delete' ad.pk %}" class="btn btn-danger">Удалить</a>
+        </div>
+    {% endif %}
+{% endif %}
+
+<h3 class="mt-4">Отзывы ({{ reviews.count }})</h3>
+
+{% for review in reviews %}
+    <div class="card mb-2">
+        <div class="card-body">
+            <p class="mb-1">{{ review.text }}</p>
+            <small class="text-muted">{{ review.author }} — {{ review.created_at|date:"d.m.Y" }}</small>
+        </div>
+    </div>
+{% empty %}
+    <p class="text-muted">Пока нет отзывов.</p>
+{% endfor %}
+
+{% if user.is_authenticated %}
+    <h4 class="mt-4">Оставить отзыв</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">Отправить</button>
+    </form>
+{% else %}
+    <p><a href="{% url 'web:login' %}">Войдите</a>, чтобы оставить отзыв.</p>
+{% endif %}
+{% endblock %}
