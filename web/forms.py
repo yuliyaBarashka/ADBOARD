@@ -9,11 +9,12 @@ User = get_user_model()
 class AdForm(forms.ModelForm):
     class Meta:
         model = Ad
-        fields = ('title', 'price', 'description')
+        fields = ('title', 'price', 'description', 'type')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'price': forms.NumberInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+            'type': forms.Select(attrs={'class': 'form-select'}),
         }
 
 
@@ -61,4 +62,3 @@ class LoginForm(AuthenticationForm):
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'class': 'form-control'}),
     )
-    

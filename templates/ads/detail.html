@@ -11,7 +11,12 @@
 
 <div class="card mb-4">
     <div class="card-body">
-        <h1>{{ ad.title }}</h1>
+        {% if ad.type == 'vacancy' %}
+        <span class="badge bg-success mb-2">Вакансия</span>
+        {% else %}
+        <span class="badge bg-secondary mb-2">Товар</span>
+        {% endif %}
+    <h1>{{ ad.title }}</h1>
         <p class="text-primary fw-bold fs-3">{{ ad.price }} ₽</p>
         <p>{{ ad.description }}</p>
         <hr>

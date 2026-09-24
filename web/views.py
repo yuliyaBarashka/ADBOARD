@@ -16,7 +16,6 @@ def index(request):
 
 
 def ad_list(request):
-    """Список объявлений с поиском и пагинацией."""
     queryset = Ad.objects.all()
 
     search = request.GET.get('search', '').strip()
@@ -30,6 +29,10 @@ def ad_list(request):
     if max_price:
         queryset = queryset.filter(price__lte=max_price)
 
+    ad_type = request.GET.get('type')
+    if ad_type:
+        queryset = queryset.filter(type=ad_type)
+
     paginator = Paginator(queryset, 4)
     page_number = request.GET.get('page', 1)
     page_obj = paginator.get_page(page_number)
@@ -39,6 +42,7 @@ def ad_list(request):
         'search': search,
         'min_price': min_price or '',
         'max_price': max_price or '',
+        'ad_type': ad_type or '',
     }
     return render(request, 'ads/list.html', context)
 
