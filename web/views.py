@@ -1,12 +1,13 @@
-from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
+from django.shortcuts import get_object_or_404, redirect, render
 
-from ads.models import Ad, Review
-from .forms import AdForm, ReviewForm, RegisterForm, LoginForm
+from ads.models import Ad
+
+from .forms import AdForm, LoginForm, RegisterForm, ReviewForm
 
 
 def index(request):
