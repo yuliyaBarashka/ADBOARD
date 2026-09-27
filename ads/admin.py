@@ -4,8 +4,8 @@ from .models import Ad, Review
 
 @admin.register(Ad)
 class AdAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'price', 'author', 'created_at')
-    list_filter = ('created_at', 'author')
+    list_display = ('id', 'title', 'type', 'price', 'author', 'created_at')
+    list_filter = ('type', 'created_at', 'author')
     search_fields = ('title', 'description')
 
 

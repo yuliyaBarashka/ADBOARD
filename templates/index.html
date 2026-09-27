@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}AdBoard — Главная{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <h1 class="display-5 fw-bold">AdBoard</h1>
+    <p class="fs-5">Доска объявлений — покупай и продавай легко</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'web:ad-list' %}">Смотреть объявления</a>
+</div>
+
+<h2 class="mb-4">Последние объявления</h2>
+<div class="row">
+    {% for ad in ads %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ ad.title }}</h5>
+                    <p class="text-primary fw-bold fs-5">{{ ad.price }} ₽</p>
+                    <p class="card-text">{{ ad.description|truncatewords:15 }}</p>
+                </div>
+                <div class="card-footer bg-white">
+                    <small class="text-muted">{{ ad.author }}</small>
+                    <a href="{% url 'web:ad-detail' ad.pk %}" class="btn btn-sm btn-outline-primary float-end">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>Пока нет объявлений.</p>
+    {% endfor %}
+</div>
+{% endblock %}

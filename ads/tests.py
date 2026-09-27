@@ -116,7 +116,7 @@ class TestReview:
 
 @pytest.mark.django_db
 def test_ad_str(ad):
-    assert str(ad) == 'Ноутбук'
+    assert str(ad) == '[Товар] Ноутбук'
 
 
 @pytest.mark.django_db
@@ -131,3 +131,15 @@ def test_admin_can_update_any(api_client, admin, ad):
     url = reverse('ad-detail', args=[ad.id])
     response = api_client.patch(url, {'title': 'Админ изменил'})
     assert response.status_code == 200
+
+
+@pytest.mark.django_db
+def test_filter_by_type(api_client, user):
+    Ad.objects.create(title='Товар', price=100, description='X', type='item', author=user)
+    Ad.objects.create(title='Вакансия', price=200, description='Y', type='vacancy', author=user)
+
+    url = reverse('ad-list') + '?type=vacancy'
+    response = api_client.get(url)
+    assert response.status_code == 200
+    assert response.data['count'] == 1
+    assert response.data['results'][0]['title'] == 'Вакансия'
